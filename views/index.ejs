@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+</head>
+<body>
+  <header>
+    <%- include('partials/header') -%>
+    <h1 class="text-4xl">Welcome to Dashboard</h1>
+  </header>
+  
+  <main style="padding-left:190px;">
+    <% if (locals.isAuthenticated) { %>
+      <p>You are logged in. <a href="/profile" class="underline">View your profile</a>.</p>
+    <% } else { %>
+      <p>You are not logged in. <a href="/login" class="underline">Login</a>.</p>
+    <% } %>
+  </main>
+
+  <footer style="padding-left:190px;">
+    <%- include('partials/footer') -%>
+    <p>@loginpage</p>
+  </footer>
+</body>
+</html>
